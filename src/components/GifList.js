@@ -1,8 +1,15 @@
 import React from 'react';
 
 function GifList({ gifs }) {
-  console.log(gifs[0]);
-  return gifs.forEach((gif) => <img key={gif} src={gif} alt={gif} />);
+  return (
+    <ul>
+      {gifs.map((gif) => (
+        <li>
+          <img key={gif} src={gif} alt={gif} />
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 export default GifList;
